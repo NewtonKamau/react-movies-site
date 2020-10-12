@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Movie from "./components/Movie";
 
-const popularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=7881030c71067049ff65f2cede7914f1&language=en-US&page=1";
-const apiKey="7881030c71067049ff65f2cede7914f1";
-const movieSearch="https://api.themoviedb.org/3/search/movie?api_key=7881030c71067049ff65f2cede7914f1&language=en-US&query="
+const popularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=apiKey&language=en-US&page=1";
+const apiKey=process.env.REACT_MOVIE_API;
+const movieSearch="https://api.themoviedb.org/3/search/movie?api_key=apiKey&language=en-US&query="
    
 
 function App() {

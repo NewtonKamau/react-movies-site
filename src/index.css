@@ -13,6 +13,7 @@ body{
 .movie{
   margin: 1rem;
   width: 300px;
+  background-color: #bbbb ;
 }
 .movie img{
   max-width: 100%;
