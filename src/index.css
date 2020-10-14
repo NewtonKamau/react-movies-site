@@ -36,6 +36,7 @@ header{
 .movie-container{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .movie-info{
   display: flex;
@@ -67,4 +68,18 @@ border-radius: 50px;
 background-color: transparent;
 color: white;
 text-decoration: white;
+}
+.tag{
+  background-color: #bbbb;
+  border-radius: 5px;
+  font-weight:bold ;
+}
+.tag.green{
+  color: green;
+}
+.tag.orange{
+  color: orange;
+}
+.tag.red{
+  color: red;
 }
