@@ -8,16 +8,20 @@ const movieSearch="https://api.themoviedb.org/3/search/movie?api_key=7881030c710
    
 
 function App() {
+  //states 
 const [movies,setMovies] = useState([]);
 const [searchTerm,setSearchTerm] = useState("");
+//use effect
 useEffect(() => {
   getMovies(popularMovies)
 }, []);
+//call the api and return the movies as json
 function getMovies(API){
   fetch(API)
   .then((res)=>res.json())
   .then((data)=> setMovies(data.results))
 }
+//listen for change and prevent reload of the page and also set movie search to empty
 const handleChange = (e) =>{
   e.preventDefault();
   if(searchTerm){
@@ -25,6 +29,7 @@ const handleChange = (e) =>{
  setSearchTerm("");
   }
 }
+//get the typed value on the search bar
 const handleOnChange = (e)=>{
   setSearchTerm(e.target.value);
 }
