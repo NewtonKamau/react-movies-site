@@ -3,6 +3,7 @@ import React from "react";
 const movieImages="http://image.tmdb.org/t/p/w1280";
 
 const Movie = ({title,poster_path,overview,vote_average}) => {
+
     return (
         <div >
        <div className="movie ">
@@ -15,7 +16,9 @@ const Movie = ({title,poster_path,overview,vote_average}) => {
   </div>
    <div className="movie-over">
    <h2>Overview</h2>
-    <p>{overview}</p>
+    <p>
+      {overview}
+    </p>
    </div>
    </div>
    </div>
