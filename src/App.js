@@ -3,7 +3,7 @@ import './App.css';
 import Movie from "./components/Movie";
 
 const popularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=7881030c71067049ff65f2cede7914f1&language=en-US&page=1";
-const apiKey="7881030c71067049ff65f2cede7914f1";
+
 const movieSearch="https://api.themoviedb.org/3/search/movie?api_key=7881030c71067049ff65f2cede7914f1&language=en-US&query="
    
 
