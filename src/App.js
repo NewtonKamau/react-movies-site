@@ -11,16 +11,17 @@ function App() {
 const [movies,setMovies] = useState([]);
 const [searchTerm,setSearchTerm] = useState("");
 useEffect(() => {
- fetch(popularMovies)
- .then((res)=>res.json())
- .then((data)=> setMovies(data.results))
+  getMovies(popularMovies)
 }, []);
+function getMovies(API){
+  fetch(API)
+  .then((res)=>res.json())
+  .then((data)=> setMovies(data.results))
+}
 const handleChange = (e) =>{
   e.preventDefault();
   if(searchTerm){
-  fetch(movieSearch + searchTerm)
- .then((res)=>res.json())
- .then((data)=> setMovies(data.results))
+ getMovies(movieSearch + searchTerm)
  setSearchTerm("");
   }
 }
