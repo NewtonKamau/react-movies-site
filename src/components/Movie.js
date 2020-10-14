@@ -15,7 +15,10 @@ const Movie = ({title,poster_path,overview,vote_average}) => {
     return (
         <div >
        <div className="movie ">
-       <img src={movieImages + poster_path} alt={title} />
+       <img src={poster_path ?
+         movieImages + poster_path :
+          "https://images.unsplash.com/photo-1458053688450-eef5d21d43b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+         } alt={title} />
     
    <div className= "movie-info ">
      <h3>{title}</h3>
